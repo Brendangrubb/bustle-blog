@@ -1,0 +1,21 @@
+{{#if addStory}}
+  <form class="" action="index.html" method="post">
+    <label for="title">Title</label>
+    {{input value=title id="title"}}
+    <label for="author">Author</label>
+    {{input value=author id="author"}}
+    <label for="teaser">teaser text</label>
+    {{input value=teaser id="teaser"}}
+    <label for="body">Body</label>
+    {{textarea rows=6 value=body id="body"}}
+    <label for="image">Image URL</label>
+    {{input value=image id="image"}}
+    <label for="tags">tags</label>
+    {{input value=tags id="tags"}}
+    <label for="category">category</label>
+    {{input value=category id="category"}}
+    <button {{action "saveArticle"}}>Publish</button>
+  </form>
+  {{else}}
+  <button {{action 'showAddStoryForm'}}>Add A New Story</button>
+  {{/if}}
