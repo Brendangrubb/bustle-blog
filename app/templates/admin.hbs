@@ -4,10 +4,18 @@
 
 {{new-article article=article saveArticle="saveArticle"}}
 
-
-<p>List of stories (add delete/edit buttons)</p>
 {{#each model as |article|}}
-{{#link-to 'article' article.id}}
-<p>{{article.title}} By: {{article.author}}</p>
-{{/link-to}}
+<div class="row">
+  <div class="col-md-1">
+    <button {{action "deleteArticle" article}}>Delete</button>
+  </div>
+  <div class="col-md-1">
+    <button {{action "updateArticle" article}}>Update</button>
+  </div>
+  <div class="col-md-10">
+    {{#link-to 'article' article.id}}
+    <p>{{article.title}} By: {{article.author}}</p>
+    {{/link-to}}
+  </div>
+</div>
 {{/each}}
