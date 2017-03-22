@@ -1,4 +1,5 @@
-{{#if addStory}}
+
+  <h3>Update this Article</h3>
   <form class="" action="index.html" method="post">
     <label for="title">Title</label>
     {{input value=title id="title"}}
@@ -14,17 +15,5 @@
     {{input value=tags id="tags"}}
     <label for="category">category</label>
     {{input value=category id="category"}}
-
-    {{#if article}}
-        <button {{action "updateArticle" article}}>Update</button>
-    {{else}}
-        <button {{action "saveArticle"}}>Save</button>
-    {{/if}}
+    <button {{action "saveArticle" article}}>Publish</button>
   </form>
-{{else}}
-    {{#if article}}
-      <button {{action 'showUpdateStoryForm'}}>Update Story</button>
-    {{else}}
-      <button {{action 'showAddStoryForm'}}>Add A New Story</button>
-    {{/if}}
-{{/if}}

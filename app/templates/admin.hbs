@@ -2,20 +2,24 @@
 
 <h1>Admin Page</h1>
 
-{{new-article article=article saveArticle="saveArticle"}}
+<div class="addStory">
+  {{new-article article=article saveArticle="saveArticle" hideUpdate="hideUpdate"}}
+</div>
 
 {{#each model as |article|}}
 <div class="row">
   <div class="col-md-1">
     <button {{action "deleteArticle" article}}>Delete</button>
   </div>
-  <div class="col-md-1">
-    <button {{action "updateArticle" article}}>Update</button>
-  </div>
-  <div class="col-md-10">
+  <div class="col-md-4">
     {{#link-to 'article' article.id}}
     <p>{{article.title}} By: {{article.author}}</p>
     {{/link-to}}
+  </div>
+  <div class="col-md-7">
+    <div class="updateStory">
+      {{new-article article=article updateArticle="updateArticle" hideAdd="hideAdd"}}
+    </div>
   </div>
 </div>
 {{/each}}

@@ -5,6 +5,11 @@ export default Ember.Component.extend({
   actions: {
     showAddStoryForm() {
       this.set('addStory', true);
+      this.sendAction('hideUpdate');
+    },
+    showUpdateStoryForm() {
+      this.set('addStory', true);
+      this.sendAction('hideAdd');
     },
     saveArticle() {
       var params = {
@@ -17,6 +22,19 @@ export default Ember.Component.extend({
         category: this.get('category'),
       };
       this.sendAction('saveArticle', params);
-    }
+    },
+    updateArticle(article) {
+      var params = {
+        title: this.get('title'),
+        author: this.get('author'),
+        teaser: this.get('teaser'),
+        body: this.get('body'),
+        image: this.get('image'),
+        tags: this.get('tags'),
+        category: this.get('category'),
+      };
+      this.sendAction('updateArticle', article, params);
+    },
+
   }
 });
