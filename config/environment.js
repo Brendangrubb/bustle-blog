@@ -18,10 +18,10 @@ module.exports = function(environment) {
     },
 
     firebase: {
-      apiKey: "AIzaSyDUcR95Wolc4U7eD5JmL0YOfWELRcIwKhM",
-      authDomain: "music-blawg.firebaseapp.com",
-      databaseURL: "https://music-blawg.firebaseio.com",
-      storageBucket: "music-blawg.appspot.com"
+      apiKey: "AIzaSyAYFT2N5Y1ueTPnm5yVT4GejGiDG6q8j9c",
+      authDomain: "ember-blog-1d2b2.firebaseapp.com",
+      databaseURL: "https://ember-blog-1d2b2.firebaseio.com",
+      storageBucket: "ember-blog-1d2b2.appspot.com"
     },
 
     APP: {

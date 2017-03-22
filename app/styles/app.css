@@ -1,0 +1,19 @@
+footer {
+  bottom: 0;
+  background-color: gray;
+  padding: 20px
+}
+
+header {
+  background-color: gray;
+  padding: 20px;
+}
+
+body{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+img {
+  width: 800px;
+}
