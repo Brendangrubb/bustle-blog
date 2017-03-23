@@ -10,10 +10,10 @@
 {{#each model.comments as |comment|}}
   <div class="row">
     <div class="col-md-1">
-      <button class="btn btn-sm" {{action "deleteComment" comment}}>Delete </button>
+      <button class="btn btn-sm" {{action "deleteComment" comment}}>Delete</button>
     </div>
     <div class="col-md-1">
-      <button class="btn btn-sm" {{action "updateComment" comment}}>Update </button>
+      <button class="btn btn-sm" {{action "updateComment" comment}}>Update</button>
     </div>
     <div class="col-md-10">
       <h4>{{comment.user}}</h4>
