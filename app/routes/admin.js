@@ -12,7 +12,13 @@ export default Ember.Route.extend({
     },
     deleteArticle(article) {
       if (confirm("Are you absolutely, positively sure that you want to delete this article? I think it's some of your best work!")) {
-        article.destroyRecord();
+        var commentDeletions = article.get('comments').map(function(comment) {
+          return comment.destroyRecord();
+        });
+        Ember.RSVP.all(commentDeletions).then(function() {
+          return article.destroyRecord();
+        });
+
       }
     },
     updateArticle(article, params) {
