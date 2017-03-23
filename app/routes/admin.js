@@ -11,7 +11,6 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
     deleteArticle(article) {
-      console.log(article);
       if (confirm("Are you absolutely, positively sure that you want to delete this article? I think it's some of your best work!")) {
         article.destroyRecord();
       }
@@ -31,7 +30,6 @@ export default Ember.Route.extend({
     },
     hideUpdate(){
       $(".updateStory").hide();
-
     }
   }
 });

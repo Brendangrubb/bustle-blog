@@ -1,0 +1,11 @@
+{{#if addComment}}
+<form class="" action="index.html" method="post">
+  <label for="commentBody">Comment</label>
+  {{input value=commentBody id="commentBody"}}
+  <label for="user">Author</label>
+  {{input value=user id="user"}}
+  <button {{action "postComment" article}}>Post Comment</button>
+</form>
+{{else}}
+  <button {{action "openCommentForm" article}}>Add A Comment</button>
+  {{/if}}
