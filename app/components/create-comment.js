@@ -3,9 +3,8 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   addComment: false,
   actions: {
-    openCommentForm(article) {
+    openCommentForm() {
       this.set('addComment', true);
-      console.log(article);
     },
     postComment(article) {
       var params = {

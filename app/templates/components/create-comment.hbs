@@ -7,5 +7,6 @@
   <button {{action "postComment" article}}>Post Comment</button>
 </form>
 {{else}}
-  <button {{action "openCommentForm" article}}>Add A Comment</button>
+  <button  class="btn" {{action "openCommentForm"}}>Add A Comment</button>
+  <hr>
   {{/if}}
